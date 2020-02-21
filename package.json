@@ -36,5 +36,5 @@
 	"jest": {
 		"testEnvironment": "node"
 	},
-	"license": "MIT",
+	"license": "MIT"
 }
