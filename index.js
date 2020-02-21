@@ -31,13 +31,13 @@ const getCustomGeneratedFiles = async (context, owner, repo) => {
 	const lines = buff.toString('ascii').split('\n');
 
 	return lines.reduce((accumulator, value) => {
-		if (item.includes('linguist-generated=true') === false) {
+		if (value.includes('linguist-generated=true') === false) {
 			return accumulator;
 		}
 
 		return [
 			...accumulator,
-			value,
+			value.split(' ')[0],
 		];
 	}, []);
 };
