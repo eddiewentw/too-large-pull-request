@@ -118,8 +118,6 @@ module.exports = app => {
 		}
 
 		await addLabel(context);
-
-		return;
 	})
 
 	// we don't care about marketplace events
