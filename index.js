@@ -67,7 +67,7 @@ module.exports = app => {
 	app.on([
 		'pull_request.opened',
 		'pull_request.reopened',
-		'pull_request.synchronized',
+		'pull_request.synchronize',
 		'pull_request.edited',
 	], async context => {
 		const pullRequest = context.payload.pull_request;
