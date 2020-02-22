@@ -89,7 +89,7 @@ module.exports = app => {
 				additions -= item.additions;
 				deletions -= item.deletions;
 			}
-		})
+		});
 
 		// check the size
 		const shouldAddLabel = isMoreThanBoundary(additions + deletions);
