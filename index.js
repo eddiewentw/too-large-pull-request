@@ -95,7 +95,11 @@ module.exports = app => {
 		const shouldAddLabel = isMoreThanBoundary(additions + deletions);
 
 		if (shouldAddLabel === false) {
-			if (pullRequest.labels.includes(LABEL_NAME) === true) {
+			if (
+				pullRequest.labels
+					.map(label => label.name)
+					.includes(LABEL_NAME) === true
+			) {
 				removeLabel(context);
 			}
 
@@ -105,7 +109,11 @@ module.exports = app => {
 		/**
 		 * should add the label and it already has
 		 */
-		if (pullRequest.labels.includes(LABEL_NAME) === true) {
+		if (
+			pullRequest.labels
+				.map(label => label.name)
+				.includes(LABEL_NAME) === true
+		) {
 			return;
 		}
 
